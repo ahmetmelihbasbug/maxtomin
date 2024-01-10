@@ -1,14 +1,36 @@
 # maxtomin
 Ahmet Melih Basbug's Adjust question 1 solution (max_to_min)
 
-Test mode 1:
-SELECT max_to_min(val)
-FROM (VALUES(15),(3),(6),(7),(9),(10),(7)) t(val);
+Step 1 Building and installing maxtomin
 
-Test mode 2:
-create table t (val int);
-insert into t select val from (VALUES(15),(3),(6),(7),(9),(10),(7)) t(val);
-SELECT max_to_min(val)
-FROM t;
+You will need postgresql development packages to build maxtomin before make install command
 
-!NOTE!: when this aggregate function gets less than 2 values it gives error as "need more than one value!"
+```
+sudo make install
+```
+
+Step 2 Creating extensions
+
+```
+postgres=# CREATE EXTENSION maxtomin;
+```
+
+Step 3 Update to new version
+```
+postgres=# ALTER EXTENSION maxtomin UPDATE;
+```
+
+Step 4 Testing
+
+> [!TIP]
+> SELECT max_to_min(val) FROM (VALUES(5),(3),(6),(7),(9),(10),(7)) t(val);
+
+> [!TIP]
+> create table t (val int);
+> 
+> insert into t select val from (VALUES(5),(3),(6),(7),(9),(10),(7)) t(val);
+> 
+> SELECT max_to_min(val) FROM t;
+
+> [!NOTE]
+>  when this aggregate function gets less than 2 values it gives error as "need more than one value!"
