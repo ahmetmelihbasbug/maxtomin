@@ -1,5 +1,5 @@
 # maxtomin
-Ahmet Melih Basbug's Adjust question 1 solution (max_to_min)
+Ahmet Melih Basbug's question 1 solution
 
 Step 1 Building and installing maxtomin
 
