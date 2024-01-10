@@ -1,5 +1,6 @@
 EXTENSION = maxtomin        # the extensions name
-DATA = ahm_maxtomin.sql     # script file to install
+DATA = maxtomin--1.0.sql     # script file to install
+PGFILEDESC = "max_to_min function"
 
 # postgres build stuff
 PG_CONFIG = pg_config
